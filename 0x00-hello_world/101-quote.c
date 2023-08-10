@@ -1,12 +1,16 @@
-#include<stdlib.h>
+#include <unistd.h>
 
-/*
- * main - Entry point
- * Description: 'writting a quotes'
- * Return: Always 1 if success
- */
 int main(void)
 {
-printf("and that piece of art is useful\" - Dora Korpar, 2015-10-19");
-return (1);
+    char str[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+    size_t len = sizeof(str) - 1;
+
+    ssize_t bytes_written = write(STDOUT_FILENO, str, len);
+
+    if (bytes_written != len)
+    {
+        return (0);
+    }
+
+    return (1);
 }
