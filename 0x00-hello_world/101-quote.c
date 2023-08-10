@@ -2,7 +2,9 @@
 
 /*
  * main - Entry point
+ *
  * Description: 'print string using write function'
+ *
  * Return: Always 1 if success
  */
 int main(void)
