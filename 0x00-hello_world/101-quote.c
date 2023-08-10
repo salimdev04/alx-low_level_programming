@@ -7,10 +7,5 @@ int main(void)
 
     ssize_t bytes_written = write(STDOUT_FILENO, str, len);
 
-    if (bytes_written != len)
-    {
-        return (0);
-    }
-
     return (1);
 }
