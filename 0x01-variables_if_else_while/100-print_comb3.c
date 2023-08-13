@@ -14,6 +14,7 @@ int main(void)
 	{
 		int first_digit = number / 10;
 		int last_digit = number % 10;
+
 		if (first_digit < last_digit)
 		{
 			putchar('0' + first_digit);
@@ -24,7 +25,6 @@ int main(void)
 				putchar(' ');
 			}
 		}
-		
 	}
 	putchar('\n');
 	return (0);
