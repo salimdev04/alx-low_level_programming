@@ -13,7 +13,7 @@ int main(void)
 	for (number = 0; number < 16; number++)
 	{
 		if (number < 10)
-		{		
+		{
 			putchar('0' + number);
 		}
 		else
