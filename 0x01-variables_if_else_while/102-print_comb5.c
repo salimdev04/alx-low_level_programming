@@ -14,15 +14,18 @@ int main(void)
 	{
 		int first_digit = number / 10;
 		int last_digit = number % 10;
-		if (first_digit < last_digit)
+		if (last_digit != first_digit)
 		{
-			putchar('0' + first_digit);
-			putchar('0' + last_digit);
-			if (number < 89)
-			{
-				putchar(',');
-				putchar(' ');
-			}
+		putchar('0' + first_digit);
+		putchar('0' + first_digit);
+		putchar(' ');	
+		putchar('0' + first_digit);
+		putchar('0' + last_digit);
+		}
+		if (number < 100)
+		{
+			putchar(',');
+			putchar(' ');
 		}
 		
 	}
