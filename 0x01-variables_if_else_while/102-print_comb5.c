@@ -8,26 +8,37 @@
  */
 int main(void)
 {
-	int number;
+	int digit1 = 0;
+	int digit2, digit3;
 
-	for (number = 0; number < 100; number++)
+	while (digit1 <= 9)
 	{
-		int first_digit = number / 10;
-		int last_digit = number % 10;
-		if (last_digit != first_digit)
+		digit2 = 0;
+		while (digit2 <= 9)
 		{
-		putchar('0' + first_digit);
-		putchar('0' + first_digit);
-		putchar(' ');	
-		putchar('0' + first_digit);
-		putchar('0' + last_digit);
+			digit3 = 0;
+			while (digit3 <= 9)
+			{
+				if (digit1 != digit2 &&
+				    digit1 < digit2 &&
+				    digit2 != digit3 &&
+				    digit2 < digit3)
+				{
+					putchar(digit1 + 48);
+					putchar(digit2 + 48);
+					putchar(digit3 + 48);
+
+					if (digit1 + digit2 + digit3 != 24)
+					{
+						putchar(',');
+						putchar(' ');
+					}
+				}
+				++digit3;
+			}
+			++digit2;
 		}
-		if (number < 100)
-		{
-			putchar(',');
-			putchar(' ');
-		}
-		
+		++digit1;
 	}
 	putchar('\n');
 	return (0);
