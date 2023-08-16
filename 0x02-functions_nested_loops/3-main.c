@@ -10,11 +10,11 @@ int main(void)
     int r;
 
     r = _islower('H');
-    printf("%d", r);
+    _putchar(r + '0');
     r = _islower('o');
-    printf("%d", r);
+    _putchar(r + '0');
     r = _islower(108);
-    printf("%d", r);
-    putchar('\n');
+    _putchar(r + '0');
+    _putchar('\n');
     return (0);
 }
