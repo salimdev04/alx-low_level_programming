@@ -1,7 +1,3 @@
-#include<stdlib.h>
-#include<stdio.h>
-#include "main.h"
-
 #include "main.h"
 
 /**
@@ -39,34 +35,4 @@ void printInteger(int num)
                         _putchar(digits[i]);
                 }
         }
-}
-
-/**
- * times_table - Entry point
- *
- * Description: 'print _putchar'
- * @c: 'an integer'
- *
- * Return: 1 if true and 0 if false
- */
-void times_table(void)
-{
-	int i;
-	int  j = 0;
-	
-	while (j < 10)
-	{
-		for (i = 0; i < 10; i++)
-		{
-			int times = j*i;
-			printInteger(times);
-			if (times != 81)
-			{
-				_putchar(',');
-				_putchar(' ');
-			}
-		}
-		_putchar('\n');
-		j++;
-	}
 }
