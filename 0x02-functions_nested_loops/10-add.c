@@ -6,8 +6,8 @@
  * add - Entry point
  *
  * Description: 'print _putchar'
- * @c: 'an integer'
- *
+ * @a: 'an integer'
+ * @b: 'an integer'
  * Return: 1 if true and 0 if false
  */
 int add(int a, int b)
