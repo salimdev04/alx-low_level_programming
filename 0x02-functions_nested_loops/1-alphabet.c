@@ -2,6 +2,7 @@
 #include<stdio.h>
 
 /**
+ * print_alphabet - Entry point
  * Description: 'print _putchar'
  * Return: void
  */
