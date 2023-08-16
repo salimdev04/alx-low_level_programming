@@ -22,6 +22,6 @@ int print_sign(int c)
 	}
 	else
 	{
-		return (-1)
+		return (-1);
 	}
 }
