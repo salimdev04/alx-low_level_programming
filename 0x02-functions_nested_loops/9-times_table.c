@@ -57,13 +57,22 @@ void times_table(void)
 		{
 			int times = j * i;
 
-			printInteger(times);
-			if (i != 9)
+			if (times < 10)
 			{
-				_putchar(',');
-				_putchar(' ');
-				if (times < 10)
+				printInteger(times);
+				if (i != 9)
 				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+				}
+			}
+			else
+			{
+				printInteger(times);
+				if (i != 9)
+				{
+					_putchar(',');
 					_putchar(' ');
 				}
 			}
