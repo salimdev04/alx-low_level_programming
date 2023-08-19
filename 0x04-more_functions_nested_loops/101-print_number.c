@@ -1,26 +1,26 @@
-#include<stdio.h>
-#include <ctype.h>
-#include "main.h"
+#include"main.h"
 
 /**
- * print_diagonal - Entry point
- * @n: integer
- */
-void print_diagonal(int n)
-{
-	int i, j;
+ * print_number - Prints an integer.
+ *
+ * @n: The integer to be printed.
+*/
 
-	if (n > 0)
+void print_number(int n)
+{
+	unsigned int num = n;
+
+	/*first check if its negative*/
+	if (n < 0)
 	{
-		for (i = 0; i < n; i++)
-		{
-			_putchar('\\');
-			_putchar('\n');
-			for (j = 0; j <= i; j++)
-			{
-				_putchar(' ');
-			}
-		}
+		_putchar('-');
+		num = -num;
 	}
-	putchar('\n');
+
+	/*print the first few digits*/
+	if ((num / 10) > 0)
+		print_number(num / 10);
+
+	/*print the last digit*/
+	_putchar((num % 10) + 48);
 }
