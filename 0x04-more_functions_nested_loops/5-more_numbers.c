@@ -1,27 +1,28 @@
-#include<stdio.h>
-#include <ctype.h>
-#include "main.h"
+#include"main.h"
 
 /**
- * more_numbers - Entry point
- */
+ * more_numbers - print 0 - 14 ten times and you
+ *		can only use _putchar three times
+ *
+ * Return: Always 0 (Success)
+*/
+
 void more_numbers(void)
 {
-	int i, j;
+	int num, row, count;
 
-	j = 0;
-
-	while (j < 10)
+	for (row = 1; row <= 10; ++row)
 	{
-		for (i = 0; i <= 14; i++)
+		for (count = 0; count <= 14; ++count)
 		{
-			if (i >= 10)
+			num = count;
+			if (count > 9)
 			{
-				_putchar('0' + i / 10);
+				_putchar(1 + 48);
+				num = count % 10;
 			}
-			_putchar('0' + i % 10);
+			_putchar(num + 48);
 		}
-		putchar('\n');
-		j++;
+		_putchar('\n');
 	}
 }
