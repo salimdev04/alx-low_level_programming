@@ -1,26 +1,27 @@
-#include<stdio.h>
-#include <ctype.h>
 #include "main.h"
 
 /**
- * print_diagonal - Entry point
- * @n: integer
+ * print_square -  square of size size
+ * @size: size of the square
+ *
+ * Return: void
  */
-void print_diagonal(int n)
-{
-	int i, j;
 
-	if (n > 0)
+
+void print_square(int size)
+{
+	int a, b;
+
+	if (size <= 0)
+		_putchar('\n');
+
+	for (a = 0; a < size; a++)
 	{
-		for (i = 0; i < n; i++)
+		for (b = 0; b < (size); b++)
 		{
-			_putchar('\\');
-			_putchar('\n');
-			for (j = 0; j <= i; j++)
-			{
-				_putchar(' ');
-			}
+			_putchar('#');
 		}
+		_putchar('\n');
 	}
-	putchar('\n');
+
 }
